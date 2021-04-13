@@ -1,4 +1,3 @@
-//Constructor obj tipo persona
 function Person(name, surname, email) {
     this.name = name;
     this.surname = surname;
@@ -8,8 +7,12 @@ function Person(name, surname, email) {
     }
 }
 
+//añadir propiedad fuera del constructor a todos los obj tipo persona
+Person.prototype.phone = '652149874';
+
 let father = new Person('Daniel', 'Díaz', 'suEmail');
-console.log(father.completeName());
+//father.phone = '365221498'; //propiedad exclusiva del objeto father
+console.log(father.phone);
 
 let mother = new Person('Yaiza', 'Trinidad', 'otro_email');
 console.log(mother.completeName());
