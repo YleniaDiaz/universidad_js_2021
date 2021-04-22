@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Eventos JS</title>
+</head>
+
+<body>
+    <h1 onclick="this.innerHTML='Hiciste click en el título'">Eventos con JS</h1>
+    <h1 onclick="changeTxt(this)">Otro título para hacer click</h1>
+    <p onclick="changeTxt(this)">Esto es un texto</p>
+
+    <script>
+        function changeTxt(tag) {
+            if (tag.tagName == 'H1') {
+                tag.innerHTML = 'Has hecho click en este título';
+            } else if (tag.tagName == 'P') {
+                tag.innerHTML = 'Has hecho click en este texto';
+            }
+        }
+    </script>
+</body>
+
+</html>

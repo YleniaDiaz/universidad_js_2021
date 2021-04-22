@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulario</title>
+</head>
+
+<body>
+
+    <form id="testForm">
+        <p>Nombre: </p><input type="text" name="name" placeholder="Ataulfo" />
+        <br/>
+        <p>Apellidos: </p><input type="text" name="surname" placeholder="Pérez" />
+        <br/>
+    </form>
+    <br/>
+    <button onclick="showValues()">Mostrar</button>
+    <br/>
+    <p id="txtValues"></p>
+
+    <script>
+        function showValues() {
+            let testForm = document.forms['testForm'];
+            let txtValues = '';
+            //for (const input of testForm) txtValues += `${input.value} `;
+
+            let name = testForm['name'];
+            let surname = testForm['surname'];
+            txtValues = `Nombre: ${name.value} - Apellidos: ${surname.value}`;
+
+            //console.log(txtValues);
+            document.getElementById('txtValues').innerHTML = txtValues;
+        }
+    </script>
+</body>
+
+</html>

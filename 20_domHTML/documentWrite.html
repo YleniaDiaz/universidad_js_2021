@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Manejo del DOM con JS</title>
+</head>
+
+<body>
+
+    <h1 id="title">Manejo del DOM</h1>
+    <button onclick="show()">Mostrar</button>
+    <br/>
+    <br/>
+    <img id="image" src="img/js_logo.png" height="150" width="150" />
+    <script>
+        //document.write('Prueba del document.write()');
+
+        function show() {
+            //document.getElementById('title').innerHTML = 'Cambio el título';
+            document.getElementById('image').src = 'img/js_logo_2.png';
+        }
+    </script>
+
+</body>
+
+</html>

@@ -6,16 +6,36 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Ejemplo DOM con JS</title>
+    <style>
+        .blue {
+            color: blue;
+        }
+    </style>
 </head>
 
 <body>
 
-    <h1 id="title">Ejemplo DOM con JS</h1>
-    <p id="text">Prueba</p>
+    <h1 id="title" class="blue">Ejemplo DOM con JS</h1>
+    <p id="text" class="blue">Prueba</p>
+    <p id="otherText">Otro texto</p>
+
     <script>
-        let title = document.getElementById('title').innerHTML;
-        let text = document.getElementById('text').innerHTML;
-        console.log(`Título: ${title} - Texto: ${text}`);
+        //let title = document.getElementById('title').innerHTML;
+        //let text = document.getElementById('text');
+        //console.log(`Título: ${title} - Texto: ${text.innerHTML}`);
+        //text.innerHTML = 'Nuevo texto';
+
+        //let pTexts = document.getElementsByTagName('p');
+        //console.log(`Número de etiquetas p -> ${pTexts.length}`);
+        //for (let i = 0; i < pTexts.length; i++) console.log(`Texto ${i+1}: ${pTexts[i].innerHTML}`);
+
+        //let tags = document.getElementsByClassName('blue');
+        //console.log(`Número de etiquetas con clase .blue -> ${tags.length}`);
+        //for (const tag of tags) console.log(`Texto ${tag.tagName}: ${tag.innerHTML}`);
+
+        let tags = document.querySelectorAll('p.blue');
+        console.log(`Número de etiquetas con clase .blue -> ${tags.length}`);
+        for (const tag of tags) console.log(`Texto p con clase .blue: ${tag.innerHTML}`);
     </script>
 
 </body>
