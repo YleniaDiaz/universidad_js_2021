@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>addEventListener</title>
+</head>
+
+<body>
+    <h1 id="title">addEventListener</h1>
+    <br/>
+    <p>Nombre: </p> <input type="text" id="name" />
+    <br/>
+    <p>Apellidos: </p> <input type="text" id="surname" />
+
+    <script>
+        document.getElementById('name').addEventListener('focus', (event) => {
+            event.target.style.backgroundColor = 'pink';
+        });
+        document.getElementById('name').addEventListener('blur', (event) => {
+            event.target.style.backgroundColor = 'white';
+        });
+
+        document.getElementById('surname').addEventListener('focus', changeBackgroundColor);
+        document.getElementById('surname').addEventListener('blur', changeBackgroundColor);
+
+        function changeBackgroundColor(event) {
+            let tag = event.target;
+            tag.style.backgroundColor = tag.style.backgroundColor == 'gold' ? 'white' : 'gold';
+        }
+    </script>
+</body>
+
+</html>
